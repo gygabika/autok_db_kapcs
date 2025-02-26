@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
  
 app.get("/", (rqs, res) => {
-    res.send("Szerver a 8080-as Porton fut.")
+    res.send("Fut a backend!")
 });
  
 app.listen(8080, () => {
@@ -33,7 +33,7 @@ app.get("/kolcsonozhetoautok", (req, res) => {
 });
 
 app.get("/marka", (req,res) => {
-    const sql = "SELECT `marka` FROM `kolcsonozhetoaut`;";
+    const sql = "SELECT `marka` FROM `kolcsonozhetoautok`;";
     db.query(sql, (err, result) => {
         if (err) return res.json(err);
         return res.json(result)
