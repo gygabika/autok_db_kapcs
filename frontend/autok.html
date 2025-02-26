@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="autok.css">
+    <title>DriveUs/AUTÓK</title>
+</head>
+<body>
+    <header>
+        <h1 id="focim">DriveUs</h1>
+        <nav>
+            <a href="../hirlap/hirlap.html">HÍRLAP</a>
+            <a href="../berleseim/berleseim.html">BÉRLÉSEIM</a>
+            <a href="../profilom/profilom.html">PROFILOM</a>
+            <a href="../fooldal/index.html">FŐOLDAL</a>
+        </nav>
+    </header>
+     <main>
+
+        <div class="filter-menu">
+            <label for="category">Kategória:</label>
+            <select id="category" onchange="fetchCars()">
+                <option value="">Összes</option>
+                <option value="mini">Kisautó</option>
+                <option value="hatchback">Kompakt</option>
+                <option value="sedan">Sedan</option>
+                <option value="kombi">Kombi</option>
+                <option value="suv">SUV</option>
+                <option value="crossover">Crossover</option>
+                <option value="coupe">Coupe</option>
+                <option value="cabrio">Cabrio</option>
+                <option value="pickup">Pickup</option>
+                <option value="off-road">Off-road</option>
+                <option value="luxury-car">Luxusautó</option>
+                <option value="sportscar">Sportautó</option>
+                <option value="electric">Elektromos autó</option>
+                <option value="hybrid">Hibrid autó</option>
+                <option value="commercial-car">Haszongépjármű</option>
+                <option value="classic-car">Veterán autó</option>
+            </select>
+            <label for="brand">Márka:</label>
+            <select id="brand" onchange="fetchCars()">
+                <option value="">Összes</option>
+            </select>
+            <label for="model">Model:</label>
+            <select id="model" onchange="fetchCars()">
+                <option value="">Összes</option>
+            </select>
+            <label for="fuel">Üzemanyag:</label>
+            <select id="fuel" onchange="fetchCars()">
+                <option value="">Összes</option>
+            </select>
+            <label for="color">Szín:</label>
+            <select id="color" onchange="fetchCars()">
+                <option value="">Összes</option>
+            </select>
+            <label for="seats">Ülések száma:</label>
+            <select id="seats" onchange="fetchCars()">
+                <option value="">Összes</option>
+            </select>
+        </div>
+    
+        <div class="cars" id="cars"></div>
+
+        <h2 class="mb-4 text-center">Aktuális ajánlataink</h2>
+        
+        <div class="row">
+            <div class="col-12 offset-md-1 col-md-10 offset-lg-0 col-lg-6">
+                <div class="card border-light mb-3">
+                    <div class="card-header bg-secondary">
+                        <span class="fw-bold">Autó</span>
+                        <span class="float-end">2022-02-24</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text">
+                            <p><strong>Kategória:</strong> SUV</p>
+                            <p><strong>Motor:</strong> 2.0 Turbo</p>
+                            <p><strong>Fogyasztás:</strong> 8L/100km</p>
+                            <p><strong>Szín:</strong> Fekete</p>
+                            <p><strong>Ülések száma:</strong> 5</p>
+                        </div>
+                        <img class="card-img-right p-2" src="autokep.jpg" alt="Autó kép">
+                    </div>
+                    <div class="card-footer text-center">
+                        <a class="btn btn-primary px-4" href="mailto:driveus@gmail.com?subject=Érdeklődés RefNo: 1&body=Foglalni szeretném az adott járművet!">
+                            Foglalás
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+     </main>
+     <footer>
+        <img src="" alt="DriveUs Logo" id="img1">
+        <p id="footer_p">Válogass prémium autóink közül, és indulj útnak stílusosan!</p>
+        <button id="nyelv" onclick="switchLanguage()">Switch to English</button>
+    </footer>
+ <script src="autok.js"></script>
+ </body>
+ </html>
